@@ -29,7 +29,7 @@ araragiMID = araragi.profile.mid
 myProfile["displayName"] = araragiProfile.displayName
 myProfile["statusMessage"] = araragiProfile.statusMessage
 myProfile["pictureStatus"] = araragiProfile.pictureStatus
-admin=['u78643d09e42a36836a17cc918963a8b7','u529ed08e968ba9d107784186eb66b76a',araragiMID]
+admin=['u78643d09e42a36836a17cc918963a8b7',araragiMID]
 msg_dict = {}
 wait2 = {
     'readPoint':{},
@@ -89,7 +89,7 @@ def helpmessage():
 ║●╠[About]
 ║●╠[Creator]
 ║●╠═══════════════●
-║●╠[ ༼ Araragi Setting ༽
+║●╠[COMMAND SETTING]
 ║●╠═══════════════●
 ║●╠[Add] 
 ║●╠[Join] 
@@ -105,7 +105,7 @@ def helpmessage():
 ║●╠[Ptt]
 ║●╠[Tag]
 ║●╠═══════════════●
-║●╠[ ༼ Araragi  Self  ༽
+║●╠[COMMAND SELFBOT]
 ║●╠═══════════════●
 ║●╠[Me]
 ║●╠[MyMid]
@@ -116,7 +116,7 @@ def helpmessage():
 ║●╠[Contact @]
 ║●╠[Friendlist]
 ║●╠═══════════════●
-║●╠[ ༼ Araragi Group ༽
+║●╠[COMMAND GROUPS]
 ║●╠═══════════════●
 ║●╠[Gowner]
 ║●╠[Gurl]
@@ -222,7 +222,7 @@ def lineBot(op):
                     gs.preventJoinByTicket = True
                     araragi.updateGroup(gs)
                     invsend = 0
-                    araragi.sendMessage(op.param1,araragi.getContact(op.param2).displayName + "Heh kutil babi jangan buka qr ！")
+                    araragi.sendMessage(op.param1,araragi.getContact(op.param2).displayName + "Heh kutil babik jangan buka qr ！")
                     araragi.kickoutFromGroup(op.param1,[op.param2])
         if op.type == 13:
             contact1 = araragi.getContact(op.param2)
@@ -252,7 +252,7 @@ def lineBot(op):
                         araragi.acceptGroupInvitation(op.param1)
                         araragi.sendMessage(op.param1,text, {'MENTION': str('{"MENTIONEES":' + json.dumps(arr) + '}')}, 0)
                         araragi.sendMessage(op.param1, "Created ：")
-                        araragi.sendContact(op.param1, "u9cdc29cb1452168cadae627171b7a6ee")
+                        araragi.sendContact(op.param1, "u78643d09e42a36836a17cc918963a8b7")
                     except Exception as error:
                         print(error)
             if araragiMID in op.param3:
@@ -355,7 +355,7 @@ def lineBot(op):
                     ret_ += "\nID       : {}".format(pkg_id)
                     ret_ += "\nUrl     : line://shop/detail/{}".format(pkg_id)
                     ret_ += "\nPicUrl：https://stickershop.line-scdn.net/stickershop/v1/sticker/{}/ANDROID/sticker.png;compress=true".format(stk_id)
-                    ret_ += "\n[ By : Araragi Kanega 👑 Ay ]"
+                    ret_ += "\n[ By : 『✍͡➴͜Ĝα₤αηĸ͜͡✫』: TΣΔM SLΔCҜβΩT ]"
                     araragi.sendMessage(to, str(ret_))
                     araragi.sendImageWithURL(to, path)
             if msg.contentType == 13:
@@ -391,19 +391,19 @@ def lineBot(op):
                             elen = str(len(text) + len(mention) - 1)
                             arrData = {'S':slen, 'E':elen, 'M':mid}
                             arr.append(arrData)
-                            text += mention + "\n[ Keterangan ]:\n" + msg.contentMetadata["text"] + "\n(by : AraragiKanega👑Ay )" + "\n[ Url ]:\n" + msg.contentMetadata["postEndUrl"]
+                            text += mention + "\n[ Keterangan ]:\n" + msg.contentMetadata["text"] + "\n(by : TΣΔM SLΔCҜβΩT )" + "\n[ Url ]:\n" + msg.contentMetadata["postEndUrl"]
                             araragi.sendMessage(msg.to,text, {'MENTION': str('{"MENTIONEES":' + json.dumps(arr) + '}')}, 0)
                         except Exception as error:
                             print(error)
                     except:
-                        ret_ = "---[Artikel]---\n[Keterangan]:\n" + msg.contentMetadata["text"] + "\n(by : AraragiKanega👑Ay )"
+                        ret_ = "---[Artikel]---\n[Keterangan]:\n" + msg.contentMetadata["text"] + "\n(by : TΣΔM SLΔCҜβΩT )"
                         ret_ += "\n[]:\n" + msg.contentMetadata["postEndUrl"]
                         araragi.sendMessage(msg.to, str(ret_))
             if msg.contentType == 0:
                 if text is None:
                     return
             if sender in admin:
-                if msg.text in ["Helpe"]:
+                if msg.text in ["Help"]:
                     helpMessage = helpmessage()
                     araragi.sendMessage(to, str(helpMessage))
                 elif text.lower() == 'helptag':
@@ -416,7 +416,7 @@ def lineBot(op):
                     araragi.unsendMessage(msg_id)
                 elif text.lower() == 'creator':
                     araragi.sendMessage(to, "My Creator:")
-                    araragi.sendContact(to, "u9cdc29cb1452168cadae627171b7a6ee")
+                    araragi.sendContact(to, "u78643d09e42a36836a17cc918963a8b7")
                 elif "Fbc:" in msg.text:
                     bctxt = text.replace("Fbc:","")
                     t = araragi.getAllContactIds()
@@ -870,21 +870,21 @@ def lineBot(op):
                 elif text.lower() == 'about':
                     try:
                         arr = []
-                        owner = "u9cdc29cb1452168cadae627171b7a6ee"
+                        owner = "u78643d09e42a36836a17cc918963a8b7"
                         creator = araragi.getContact(owner)
                         contact = araragi.getContact(araragiMID)
                         grouplist = araragi.getGroupIdsJoined()
                         contactlist = araragi.getAllContactIds()
                         blockedlist = araragi.getBlockedContactIds()
-                        ret_ = " Araragi Kanega 👑 Ay "
+                        ret_ = " 『✍͡➴͜Ĝα₤αηĸ͜͡✫』 "
                         ret_ += "\nNama            : {}".format(contact.displayName)
                         ret_ += "\nGc                  : {}".format(str(len(grouplist)))
                         ret_ += "\nCont               : {}".format(str(len(contactlist)))
                         ret_ += "\nBlock             : {}".format(str(len(blockedlist)))
                         ret_ += "\n ➡ "
-                        ret_ += "\nTentang        : Araragi Bot"
+                        ret_ += "\nTentang        : TΣΔM SLΔCҜβΩT"
                         ret_ += "\nFormat          : {}".format(creator.displayName)
-                        ret_ += "\n Araragi Kanega 👑 Ay "
+                        ret_ += "\n 『✍͡➴͜Ĝα₤αηĸ͜͡✫』 "
                         araragi.sendMessage(to, str(ret_))
                     except Exception as e:
                         araragi.sendMessage(msg.to, str(e))
@@ -1161,7 +1161,7 @@ def lineBot(op):
                         gQr = "Open"
                         gTicket = "https://line.me/R/ti/g/{}".format(str(araragi.reissueGroupTicket(group.id)))
                     path = "http://dl.profile.line-cdn.net/" + group.pictureStatus
-                    ret_ = "《👺Araragi Kanega 👑 Ay 👺 》"
+                    ret_ = "《TΣΔM SLΔCҜβΩT 》"
                     ret_ += "\nNama             : {}".format(str(group.name))
                     ret_ += "\nＩＤ                : {}".format(group.id)
                     ret_ += "\n Creator        : {}".format(str(gCreator))
@@ -1169,7 +1169,7 @@ def lineBot(op):
                     ret_ += "\nPending        : {}".format(gPending)
                     ret_ += "\nQr                   : {}".format(gQr)
                     ret_ += "\nTickter           : {}".format(gTicket)
-                    ret_ += "\n[ 👺Araragi Kanega 👑 Ay 👺 ]"
+                    ret_ += "\n[ TΣΔM SLΔCҜβΩT ]"
                     araragi.sendMessage(to, str(ret_))
                     araragi.sendImageWithURL(to, path)
                 elif text.lower() == 'gb':
