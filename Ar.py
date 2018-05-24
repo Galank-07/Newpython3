@@ -7,14 +7,6 @@ from humanfriendly import format_timespan, format_size, format_number, format_le
 import time, random, sys, json, codecs, threading, glob, re, string, os, requests, subprocess, six, ast, pytz, urllib, urllib.parse,timeit,atexit
 from gtts import gTTS
 from googletrans import Translator
-#di larang untuk merubah bagian ini untuk menghargai saya yang membuat created : Araragi kanega
-# thank for :
-# Agy pascha (nvstarbot) 
-# Hanavi koplaxs
-# NadyaTjia
-#dan teman teman lainya yang sudah membantu dan memberi saya sc segaligus saran
-#gunakan bot ini dengan bijak.  Jangan berharap lebih, scrib ini masih mau di revisi dan belom sempurna
-#jika memerlukan atau ada yang ingin di tanyakan hubungi ➡ id line : araragi.  (pakai titik)  ◀ 
 
 botStart = time.time()
 araragi = LINE('EtsPaEG8q1jtyQPHVsBe.NnWPYXrsfOYTRMjXCBEM7G.ew2jSbEMc29uB0HpYt9ZEQu0YgvhBmElWyodYWN6wa4=')
@@ -37,7 +29,7 @@ araragiMID = araragi.profile.mid
 myProfile["displayName"] = araragiProfile.displayName
 myProfile["statusMessage"] = araragiProfile.statusMessage
 myProfile["pictureStatus"] = araragiProfile.pictureStatus
-admin=['ua5f2cbc325816777be5ef529eb920c50','u529ed08e968ba9d107784186eb66b76a',araragiMID]
+admin=['u78643d09e42a36836a17cc918963a8b7','u529ed08e968ba9d107784186eb66b76a',araragiMID]
 msg_dict = {}
 wait2 = {
     'readPoint':{},
@@ -85,131 +77,127 @@ def sendMessageWithMention(to, mid):
     except Exception as error:
         logError(error)
 def helpmessage():
-    helpMessage = """╔════════════════
-║ Araragi Kanega 👑 Ay 
-║╔═══════════════
-║╠⎆ ༼ Araragi Bot ༽
-║╠═══════════════
-║╠࿐【Helpkick/tag
-║╠࿐【Self:rebot
-║╠࿐【Runtime
-║╠࿐【Speed
-║╠࿐【Set
-║╠࿐【About
-║╠࿐【Creator
-║╠═══════════════
-║╠⎆ ༼ Araragi Setting ༽
-║╠═══════════════
-║╠࿐【Add 
-║╠࿐【Join 
-║╠࿐【Leave 
-║╠࿐【Read 
-║╠࿐【Inviteprotect 
-║╠࿐【Reread 
-║╠࿐【Qr 
-║╠࿐【Qrjoin 
-║╠࿐【Ck 
-║╠࿐【Groupprotect 
-║╠࿐【Kc 
-║╠࿐【Ptt 
-║╠࿐Tag 
-║╠═══════════════
-║╠⎆ ༼ Araragi  Self  ༽
-║╠═══════════════
-║╠࿐【Me
-║╠࿐【MyMid
-║╠࿐【MyName
-║╠࿐【MyBio
-║╠࿐【MyPicture
-║╠࿐【MyCover
-║╠࿐【Contact @
-║╠࿐【Friendlist
-║╠═══════════════
-║╠⎆ ༼ Araragi Group ༽
-║╠═══════════════
-║╠࿐【Gowner
-║╠࿐【Gurl
-║╠࿐【O/Curl
-║╠࿐【Lg
-║╠࿐【Gb
-║╠࿐【Ginfo
-║╠࿐【Vk:mid
-║╠࿐【Nk Name
-║╠࿐【Kickall
-║╠࿐【Uk mid
-║╠࿐【NT Name
-║╠࿐【Zk, Zt, Zm
-║╠࿐【Cancel
-║╠࿐【Gcancel
-║╠࿐【Gn Name
-║╠࿐【Gc @
-║╠࿐【Inv mid
-║╠࿐【Mb:mid
-║╠࿐【Mub:mid
-║╠࿐【Clear Ban
-║╠࿐【Kill Ban
-║╠࿐【Killbanall
-║╠࿐【banlist
-║╠࿐【Sc gid
-║╠࿐【Mc mid
-║╠═══════════════
-║╠⎆ ༼ Araragi Khusus ༽
-║╠═══════════════
-║╠࿐【Tagall
-║╠࿐【SR/DR
-║╠࿐【LR
-║╠࿐【F/Gbc
-║╠࿐【/invitemeto:
-║╠࿐【Op @
-║╠࿐【Deop @
-║╠࿐【mop:mid
-║╠࿐【mdp:mid
-║╠࿐【Opmid
-║╠࿐【Oplist
-║╚═══════════════
-║ Araragi Kanega 👑 Ay 
-╚════════════════
+    helpMessage = """
+╔════════════════●
+║●╠[TΣΔM SLΔCҜβΩT]
+║●╠══════════════●
+║●╠[Helpkick/tag]
+║●╠[Self:rebot]
+║●╠[Runtime]
+║●╠[Speed]
+║●╠[Set]
+║●╠[About]
+║●╠[Creator]
+║●╠═══════════════●
+║●╠[ ༼ Araragi Setting ༽
+║●╠═══════════════●
+║●╠[Add] 
+║●╠[Join] 
+║●╠[Leave] 
+║●╠[Read] 
+║●╠[Inviteprotect] 
+║●╠[Reread] 
+║●╠[Qr] 
+║●╠[Qrjoin] 
+║●╠[Ck]
+║●╠[Groupprotect]
+║●╠[Kc]
+║●╠[Ptt]
+║●╠[Tag]
+║●╠═══════════════●
+║●╠[ ༼ Araragi  Self  ༽
+║●╠═══════════════●
+║●╠[Me]
+║●╠[MyMid]
+║●╠[MyName]
+║●╠[MyBio]
+║●╠[MyPicture]
+║●╠[MyCover]
+║●╠[Contact @]
+║●╠[Friendlist]
+║●╠═══════════════●
+║●╠[ ༼ Araragi Group ༽
+║●╠═══════════════●
+║●╠[Gowner]
+║●╠[Gurl]
+║●╠[O/Curl]
+║●╠[Lg]
+║●╠[Gb]
+║●╠[Ginfo]
+║●╠[Vk:mid]
+║●╠[Nk Name]
+║●╠[Kickall]
+║●╠[Uk mid]
+║●╠[NT Name]
+║●╠[Zk, Zt, Zm]
+║●╠[Cancel]
+║●╠[Gcancel]
+║●╠[Gn Name]
+║●╠[Gc @]
+║●╠[Inv mid]
+║●╠[Mb:mid]
+║●╠[Mub:mid]
+║●╠[Clear Ban]
+║●╠[Kill Ban]
+║●╠[Killbanall]
+║●╠[banlist]
+║●╠[Sc gid]
+║●╠[Mc mid]
+║●╠═══════════════●
+║●╠[CΩMMΔΠD ҜHUSUS]
+║●╠═══════════════●
+║●╠[Tagall]
+║●╠[SR/DR]
+║●╠[LR]
+║●╠[F/Gbc]
+║●╠[/invitemeto:]
+║●╠[Op @]
+║●╠[Deop @]
+║●╠[mop:mid]
+║●╠[mdp:mid]
+║●╠[Opmid]
+║●╠[Oplist]
+║●╠══[FINISH]
+╚════════════════●
 """
     return helpMessage
 def helpmessagetag():
-    helpMessageTag ="""╔══════════════
-║ Araragi Kanega 👑 Ay 
-║╔═════════════
-║╠࿐〘Help Tag
-║╠࿐【Ri @
-║╠࿐【Tk @
-║╠࿐【Mk @
-║╠࿐【Vk @
-║╠࿐【Gc @
-║╠࿐【Mid @
-║╠࿐【Name @
-║╠࿐【Bio @
-║╠࿐【Picture @
-║╠࿐【Cover @
-║╠࿐【Ban @
-║╠࿐【Unban @
-║╚═════════════
-║Araragi Kanega 👑 Ay 
-╚══════════════
+    helpMessageTag ="""
+╔══════════════●
+║●╠[Help Tag]
+║●╠════════════●
+║●╠[Ri @]
+║●╠[Tk @]
+║●╠[Mk @]
+║●╠[Vk @]
+║●╠[Gc @]
+║●╠[Mid @]
+║●╠[Name @]
+║●╠[Bio @]
+║●╠[Picture @]
+║●╠[Cover @]
+║●╠[Ban @]
+║●╠[Unban @]
+║●╠══[FINISH]
+╚══════════════●
 """
     return helpMessageTag
 def helpmessagekick():
-    helpMessageKick ="""╔════════════
-║   Araragi Kanega 👑 Ay 
-║╔═══════════
-║╠࿐〘Help Kick〙
-║╠࿐【Ri @
-║╠࿐【Tk @
-║╠࿐【Mk @
-║╠࿐【Vk @
-║╠࿐【Vk:mid
-║╠࿐【Nk Name
-║╠࿐【Uk mid
-║╠࿐【Kill ban
-║╠࿐【Zk
-║════════════
-║Araragi Kanega 👑 Ay 
-╚════════════
+    helpMessageKick ="""
+╔════════════●
+║●╠[Help Kick]
+║●╠══════════●
+║●╠[Ri @]
+║●╠[Tk @]
+║●╠[Mk @]
+║●╠[Vk @]
+║●╠[Vk:mid]
+║●╠[Nk Name]
+║●╠[Uk mid]
+║●╠[Kill ban]
+║●╠[Zk]
+║●╠══[FINISH]
+╚════════════●
 """
     return helpMessageKick
 def lineBot(op):
