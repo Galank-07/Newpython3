@@ -120,7 +120,7 @@ def helpmessage():
 ║●╠═══════════════●
 ║●╠[Gowner]
 ║●╠[Gurl]
-║●╠[O/Curl]
+║●╠[Curl]
 ║●╠[Lg]
 ║●╠[Gb]
 ║●╠[Ginfo]
@@ -147,9 +147,9 @@ def helpmessage():
 ║●╠[CΩMMΔΠD ҜHUSUS]
 ║●╠═══════════════●
 ║●╠[Tagall]
-║●╠[SR/DR]
-║●╠[LR]
-║●╠[F/Gbc]
+║●╠[Setread]
+║●╠[Delread]
+║●╠[Gbc]
 ║●╠[/invitemeto:]
 ║●╠[Op @]
 ║●╠[Deop @]
