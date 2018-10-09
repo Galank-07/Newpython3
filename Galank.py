@@ -9,7 +9,7 @@ from gtts import gTTS
 from googletrans import Translator
 
 botStart = time.time()
-araragi = LINE('Et86tvUiFe56hbjOXYg7.Egq9cEqQnOnQf8YrIwoOTW.k6st2rUjxPl8N5IbbKAAJc1mhs1r93XpgzkSP9S0KI4=')
+araragi = LINE('ExraugLHjBRLXE3pJyj7.Egq9cEqQnOnQf8YrIwoOTW.c0OGeCaGh5bzlHfSDscfv5EaSEs/uJbyT2J/dGKJgbU=')
 araragi.log("Auth Token : " + str(araragi.authToken))
 
 
